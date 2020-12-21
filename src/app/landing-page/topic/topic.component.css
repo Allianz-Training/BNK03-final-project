@@ -1,0 +1,17 @@
+.topic {
+  display: flex;
+  align-items: center;
+}
+
+.topic > img {
+  height: 100px;
+  margin-right: 25px;
+}
+
+.content-header {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.content-description {
+}

@@ -1,0 +1,19 @@
+.topic {
+  /* background-color: #999; */
+  height: 55%;
+  padding: 25px 100px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  justify-content: center;
+}
+.grid-2 {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  justify-content: center;
+}
