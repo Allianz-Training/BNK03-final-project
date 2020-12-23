@@ -1,19 +1,33 @@
 .topic {
   /* background-color: #999; */
   height: 55%;
-  padding: 25px 100px;
+  padding: 5px 100px;
 }
 
-.grid-3 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  justify-content: center;
+.flex-container {
+  display: flex;
+  column-gap: 30px;
+  flex-basis: content;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-wrap: ; */
+  /* display: grid;
+  grid-template-columns: auto auto auto; */
+  /* grid-gap: 10px; */
+  /* justify-content: center; */
+}
+
+.flex-item {
+  flex: content;
+  width: 30%;
+  margin: 15px 0px;
 }
 .grid-2 {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* grid-template-columns: auto auto;
   grid-gap: 10px;
-  justify-content: center;
+  justify-content: center; */
 }

@@ -1,39 +1,12 @@
 <landing-page-banner></landing-page-banner>
 <div class="topic">
-  <div class="grid-3">
-    <landing-page-topic
-      [imgUrl]="'../../../assets/flood.png'"
-      [contentHeader]="'24 hrs. claim'"
-      [contentDescription]="'Claim Online anywhere & anytime'"
-    ></landing-page-topic>
-
-    <landing-page-topic
-      [imgUrl]="'../../../assets/flood.png'"
-      [contentHeader]="'Hospital Link'"
-      [contentDescription]="
-        'Find nearby hospital and Assistance when you have emergency situation'
-      "
-    ></landing-page-topic>
-
-    <landing-page-topic
-      [imgUrl]="'../../../assets/flood.png'"
-      [contentHeader]="'Car repairing'"
-      [contentDescription]="'Easy to find dealer & Garage'"
-    ></landing-page-topic>
-  </div>
-  <div class="grid-2">
-    <landing-page-topic
-      [imgUrl]="'../../../assets/flood.png'"
-      [contentHeader]="'Repair tracking'"
-      [contentDescription]="'Online tracking your car anytime'"
-    ></landing-page-topic>
-
-    <landing-page-topic
-      [imgUrl]="'../../../assets/flood.png'"
-      [contentHeader]="'GPS'"
-      [contentDescription]="
-        'Our implemented feature can bring you to your destination'
-      "
-    ></landing-page-topic>
+  <div class="flex-container">
+    <div class="flex-item" *ngFor="let topic of topics">
+      <landing-page-topic
+        [imgUrl]="topic.imgUrl"
+        [contentHeader]="topic.contentHeader"
+        [contentDescription]="topic.contentDescription"
+      ></landing-page-topic>
+    </div>
   </div>
 </div>
