@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageModule } from './landing-page/landing-page.module';
+import { SignInModule } from './sign-in/sign-in.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +16,7 @@ import { LandingPageModule } from './landing-page/landing-page.module';
     BrowserAnimationsModule,
     LandingPageModule,
     FormsModule,
+    SignInModule
   ],
   providers: [],
   bootstrap: [AppComponent],

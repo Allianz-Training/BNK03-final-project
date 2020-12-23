@@ -5,5 +5,6 @@ import { BaseComponent } from './base/base.component';
 @NgModule({
   declarations: [BaseComponent],
   imports: [CommonModule],
+  exports:[BaseComponent]
 })
 export class SignInModule {}
