@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageModule } from './landing-page/landing-page.module';
 import { SignInModule } from './sign-in/sign-in.module';
+import { SignUpModule } from './sign-up/sign-up.module';
+// import { NgOtpInputModule } from  'ng-otp-input';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +19,9 @@ import { SignInModule } from './sign-in/sign-in.module';
     BrowserAnimationsModule,
     LandingPageModule,
     FormsModule,
-    SignInModule
+    SignInModule,
+    SignUpModule,
+    // NgOtpInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
