@@ -9,6 +9,15 @@ div.body{
     text-align: right;
     font-size: 18px;
 }
+#login:hover{
+    color: whitesmoke;
+}
+#about-us:hover{
+    color: whitesmoke;
+}
+#contact:hover{
+    color: whitesmoke;
+}
 .short-input{
     width: 245px;
     height: 40px;
@@ -36,7 +45,7 @@ div.body{
     color: white;
 }
 ::placeholder{
-    color: white;
+    color: whitesmoke;
     text-align: center;
  
 }
@@ -49,7 +58,11 @@ div.body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    border-bottom:5px dashed #58595E;
+    width: fit-content;
+    padding-bottom: 15px; 
+    margin:auto;
+}  
 .register{
     text-align: center;
     font-size: 30px;
@@ -57,10 +70,13 @@ div.body{
     font-size: 50px;
     line-height: 100px;
     color:#2e0d70;
-    margin:-5px 0px 5px 0px;
+    margin:-5px 0px 5px 40px;
 }
 .btn{
     margin-top: -15px;
+}
+.btn:hover{
+    color: gray;
 }
 hr{
     position: absolute;
