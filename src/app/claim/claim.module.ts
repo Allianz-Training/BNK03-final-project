@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BaseComponent } from './base/base.component';
-
-
+import { InformationComponent } from './information/information.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [BaseComponent],
+  declarations: [BaseComponent, InformationComponent],
   imports: [
-    CommonModule
+    CommonModule,FormsModule, ReactiveFormsModule
   ],
   exports: [
-    BaseComponent
+    BaseComponent,InformationComponent
   ]
 })
 export class ClaimModule { }
