@@ -1,10 +1,82 @@
 header{
-    width: 100%;
     height: 100px;
     background-color: #000033;
     color: #F8F3EA;
     font-size: 48px;
+    display:grid;
+    grid-template-columns: 1fr 9fr 1fr;
+}
+#title{
+    display:flex;
+    justify-content:center;
+    align-items:center;  
+}
+#left-arrow{
+    width:50px;
+    height:50px;
+    position:absolute;
+    margin:25px;
+    transform: rotate(180deg);
+}
+#right-arrow{
+    width:50px;
+    height:50px;
+    position:absolute;
+    margin:25px;
+    
+}
+#left-arrow:hover, #right-arrow:hover{
+    width:55px;
+    height:55px;
+    margin:23px;
+}
+.body{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    font-size: 20px;
+    line-height: 50px;
+    color:#2e0d70;
+    padding:15px 0px 5px 40px;
+    width:100%;
+    background: rgba(245, 249, 253, 0.97);
+}
+.input-field{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    border-bottom:5px dashed #58595E;
+    padding-bottom: 15px; 
+} 
+.inputField input{
+    width: 300px;
+    height: 40px;
+    border: unset;
+    background: ivory;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    outline: unset;
+    padding-left: 30px;
+    color: black;
+}
+.picture-area input{
+    padding:60px 10px;
+    background-color:lightgrey;
+    margin:20px;
+}
+.txt{
+    padding-top:28px;
+}
+#title2{
+    color:black;
+    font-size:22px;
+    margin-bottom:10px;
+}
+.txt #description{
+    color:grey;
+    font-size:16px;
+}
+.upload-area{
+    text-align:center;
 }

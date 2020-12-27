@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-thirdparty',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThirdpartyComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(private builder:FormBuilder) { 
+    this.form=this.builder.group({
+      firstname:[''],
+      lastName:[''],
+      carRegistNum:[''],
+      phoneNum:[''],
+      date:[''],
+      time:['']
+    })
+  }
 
   ngOnInit(): void {
   }
 
+  push() {
+    console.log(this.form.value)
+  }
 }

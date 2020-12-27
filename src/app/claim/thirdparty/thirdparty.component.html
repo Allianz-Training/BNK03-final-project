@@ -1,6 +1,47 @@
 <header> 
-    Third Party Details
+    <div><img id="left-arrow" src="../../../assets/right-arrow.png"/></div>
+    <div id="title">Third Party Details</div>
+    <div><img id="right-arrow" (click)="push()" src="../../../assets/right-arrow.png"/></div>
 </header>
+
 <div class="body">
-    
+    <form [formGroup]="form" class="left">
+        <div class="inputField">
+            <span>First Name</span>
+            <input type="text" formControlName="firstname"/>
+        </div>
+        <div class="inputField">
+            <span>Car registration</span>
+            <input type="text" formControlName="carRegistNum"/>
+        </div>
+         <div class="inputField">
+            <span>Date of accident </span>
+            <input type="date" formControlName="date"/>
+        </div>
+    </form>
+    <form [formGroup]="form" class="right">
+        <div class="inputField">
+            <span>Last Name</span>
+            <input type="text" formControlName="lastName"/>
+        </div>
+        <div class="inputField">
+            <span>Phone number</span>
+            <input type="text" formControlName="phoneNum"/>
+        </div>
+        <div class="inputField">
+            <span>Time</span>
+            <input type="time" formControlName="time"/>
+        </div>
+    </form>
+
+</div>
+<div class="upload-area">
+    <div class="txt">
+        <div id="title2">Upload your pictures here</div>
+        <div id="description">Please upload the pictures of car registration and vehicle damaged.</div>
+    </div>
+    <div class="picture-area">
+        <input type="file"/>
+        <input type="file"/>
+    </div>
 </div>
