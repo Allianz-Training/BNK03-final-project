@@ -25,7 +25,7 @@ export class BaseComponent implements OnInit {
   }
   push() {
 
-    console.log(this.form)
+    console.log(this.form.value)
   }
 
 }

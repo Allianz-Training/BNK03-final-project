@@ -1,0 +1,18 @@
+<img id="arrow" src="../../../assets/right-arrow.png"/>
+<header>    
+    <span>Your Details</span>
+</header>
+<div class="body">
+    <div class="title-area">
+        <div id="title">Upload your pictures here</div>
+        <div id="description">Please upload the pictures of car registration and vehicle damaged.</div>
+    </div>
+    <div class="picture-area">
+        <input type="file"/>
+        <input type="file"/>
+    </div>
+    <form [formGroup]="form" class="description-area">
+        <textarea formControlName="text" placeholder="Accident description"></textarea>
+    </form>
+    <img id="finish" src="../../../assets/finish.png" (click)="push()"/>
+</div>
