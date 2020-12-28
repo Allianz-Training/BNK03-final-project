@@ -9,21 +9,24 @@ import { LandingPageModule } from './landing-page/landing-page.module';
 import { SignInModule } from './sign-in/sign-in.module';
 import { SignUpModule } from './sign-up/sign-up.module';
 import { ClaimModule } from './claim/claim.module';
+import { RouterModule } from '@angular/router';
+
 // import { NgOtpInputModule } from  'ng-otp-input';
 
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     LandingPageModule,
     FormsModule,
     SignInModule,
     SignUpModule,
-    ReactiveFormsModule,
-    ClaimModule
+    ClaimModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

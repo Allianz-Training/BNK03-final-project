@@ -1,18 +1,22 @@
 <section class="register">
-		<div class="frm text-center">
-			<h1>Enter OTP</h1>
-			<h3>The OTP has already been sent to your Email</h3>
-			<form>
-				<div class="otpInputContainer">
-				
-						<input #txt1 maxlength="1" placeholder="_" (keyup)="move(txt1,txt1, txt2)" type="text" [(ngModel)]="otpValue1" [ngModelOptions]="{standalone: true}">
-						<input #txt2 maxlength="1" placeholder="_"  (keyup)="move(txt1,txt2, txt3)" type="text" [(ngModel)]="otpValue2" [ngModelOptions]="{standalone: true}">								
-						<input #txt3 maxlength="1" placeholder="_"  (keyup)="move(txt2,txt3, txt4)" type="text" [(ngModel)]="otpValue3" [ngModelOptions]="{standalone: true}">					
-						<input #txt4 maxlength="1" placeholder="_"  (keyup)="move(txt3,txt4, txt4)" type="text" [(ngModel)]="otpValue4" [ngModelOptions]="{standalone: true}">
-					
-				</div>
-			</form>
-			<img src="../../../assets/refresh.png">
-			<button id="refresh">GET NEW OTP</button>
-		</div>
+	<div class="frm text-center">
+		<h1>Enter OTP</h1>
+		<h3><strong>The OTP has already been sent to your Email</strong></h3>
+		<form>
+			<div class="otpInputContainer">
+
+				<input #txt1 maxlength="1" placeholder="_" (keyup)="move(txt1,txt1, txt2)" type="text"
+					[(ngModel)]="otpValue1" [ngModelOptions]="{standalone: true}">
+				<input #txt2 maxlength="1" placeholder="_" (keyup)="move(txt1,txt2, txt3)" type="text"
+					[(ngModel)]="otpValue2" [ngModelOptions]="{standalone: true}">
+				<input #txt3 maxlength="1" placeholder="_" (keyup)="move(txt2,txt3, txt4)" type="text"
+					[(ngModel)]="otpValue3" [ngModelOptions]="{standalone: true}">
+				<input #txt4 maxlength="1" placeholder="_" (keyup)="move(txt3,txt4, txt4)" type="text"
+					[(ngModel)]="otpValue4" [ngModelOptions]="{standalone: true}">
+
+			</div>
+		</form>
+		<img src="../../../assets/refresh.png">
+		<button id="refresh">GET NEW OTP</button>
+	</div>
 </section>

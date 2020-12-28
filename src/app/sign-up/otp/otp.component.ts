@@ -21,9 +21,9 @@ export class OtpComponent implements OnInit {
   }
 
   move(previoustxt:any, fromtxt: any, totxt: any) {
-    var length = fromtxt.value.length;
+    let length = fromtxt.value.length;
 
-    var maxlength: string = fromtxt.getAttribute("maxlength");
+    let maxlength: string = fromtxt.getAttribute("maxlength");
 
     if (length == maxlength) {
       totxt.focus();
@@ -33,7 +33,8 @@ export class OtpComponent implements OnInit {
     }
     if(this.otpValue1 != "" && this.otpValue2 != "" && this.otpValue3 != "" && this.otpValue4 != ""){
       console.log("do something");
-      
+      let otp: string = this.otpValue1+this.otpValue2+this.otpValue3+this.otpValue4;
+      alert(otp)
     }
     
   }

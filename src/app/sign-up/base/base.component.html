@@ -1,12 +1,12 @@
 <div class="body">
     <div class="navbar">
-        
-        <span id="login">Login</span>
-        <span id="about-us">About Us</span>
-        <span id="contact">Contact</span>
+        <div></div>
+        <a [routerLink]="['/login']" id="login">Login</a>
+        <a id="about-us">About Us</a>
+        <a id="contact">Contact</a>
     </div>
     <div class="register">Registration</div>
-    
+
     <form [formGroup]="form">
         <div class="input-field">
             <div>
@@ -32,8 +32,8 @@
                     formControlName="comfirmPassword" />
             </div>
             <div>
-                <button class="btn">&lt; back</button>
-                <button class="btn" (click)="push()">next ></button>
+                <button [routerLink]="['/login']" class="btn">&lt; back</button>
+                <button class="btn" (click)="register()">next ></button>
             </div>
             <!-- <hr> -->
         </div>

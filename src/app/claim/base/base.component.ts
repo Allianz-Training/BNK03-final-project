@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './base.component.html',
   styleUrls: ['./base.component.css']
 })
-export class BaseComponent implements OnInit {
+export class ClaimBaseComponent implements OnInit {
 
   name:string="Harry Styles";
   insuranceNum:string="AB12345678"

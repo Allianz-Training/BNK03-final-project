@@ -55,6 +55,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     display: inline-flex;
+    align-items: center;
     padding-top: 5px;
 }
 
@@ -87,7 +88,9 @@
     font-size: 16px;
     font-weight: bold;
 }
-
+.text {
+    margin-top: -15px;
+}
 .text #name{
     font-weight: bold;
     font-size: 26px;

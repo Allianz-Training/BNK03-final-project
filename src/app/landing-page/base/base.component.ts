@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './base.component.html',
   styleUrls: ['./base.component.css'],
 })
-export class BaseComponent implements OnInit {
+export class LandingPageBaseComponent implements OnInit {
   topics: Array<any> = [
     {
       imgUrl: '../../../assets/24-hours.png',
