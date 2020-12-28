@@ -1,7 +1,7 @@
 <header> 
-    <div><img id="left-arrow" src="../../../assets/right-arrow.png"/></div>
+    <div><img [routerLink]="['/home']" id="left-arrow" src="../../../assets/right-arrow.png"/></div>
     <div id="title">Third Party Details</div>
-    <div><img id="right-arrow" (click)="push()" src="../../../assets/right-arrow.png"/></div>
+    <div><img [routerLink]="['/owner']" id="right-arrow" (click)="push()" src="../../../assets/right-arrow.png"/></div>
 </header>
 
 <div class="body">

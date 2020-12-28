@@ -10,12 +10,13 @@ import { SignInModule } from './sign-in/sign-in.module';
 import { SignUpModule } from './sign-up/sign-up.module';
 import { ClaimModule } from './claim/claim.module';
 import { RouterModule } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
 
 // import { NgOtpInputModule } from  'ng-otp-input';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContactComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

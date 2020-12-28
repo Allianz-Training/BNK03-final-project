@@ -5,6 +5,9 @@ import { LandingPageBaseComponent } from './landing-page/base/base.component';
 import { SignInBaseComponent } from './sign-in/base/base.component';
 import { SignUpBaseComponent } from './sign-up/base/base.component';
 import { OtpComponent } from './sign-up/otp/otp.component';
+import { ContactComponent } from './contact/contact.component';
+import { OwnerComponent } from './claim/owner/owner.component'
+import { ThirdpartyComponent } from './claim/thirdparty/thirdparty.component';
 
 const routes: Routes = [
   {
@@ -27,7 +30,18 @@ const routes: Routes = [
     path:'home',
     component: ClaimBaseComponent
   },
-
+  {
+    path:'contact',
+    component: ContactComponent
+  },
+  {
+    path:'owner',
+    component: OwnerComponent
+  },
+  {
+    path:'thirdparty',
+    component: ThirdpartyComponent
+  }
 ];
 
 @NgModule({

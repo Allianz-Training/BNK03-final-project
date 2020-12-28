@@ -2,8 +2,10 @@
     <div class="navbar">    
         <div></div>    
         <a [routerLink]="['/register']" id="register">Register</a>
-        <a id="about-us">About Us</a>
-        <a id="contact">Contact</a>
+        <a [routerLink]="['']" id="about-us">About Us</a>
+        <a [routerLink]="['/contact']" id="contact">
+            Contact
+        </a>
     </div>
     <div class="login">
         <div id="welcome"> Welcome to BNKlaim!</div>
@@ -17,7 +19,7 @@
             <i class="fa fa-lock"></i>
             <input type="text" id="password" placeholder="Password">
         </div>
-        <button id="loginbtn">Login</button>
+        <button (click)="home()" id="loginbtn">Login</button>
         <div class="under">
             <input type="checkbox" />
             <span id="remember-me">Remember me</span>
@@ -27,6 +29,6 @@
     </div>
     <hr>
     <div class="bottom">
-        Create Account
+        <a [routerLink]="['/register']">Create Account</a>
     </div>
 </div>

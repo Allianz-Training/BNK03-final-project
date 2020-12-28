@@ -1,11 +1,12 @@
 <div class="navbar">
     <div class="absolute">
         <img src="../../../assets/car-insurance.png">
-        <span>BNKlaim</span>
-    </div>
-    <div id="list">List insurance</div>
-    <div id="contact">Contact Us</div>
-    <div id="logout">Logout</div>
+        <span ><a style="text-decoration: none; color: white;" [routerLink]="['']">BNKlaim</a></span>
+        
+    </div>  
+    <!-- <div id="list">List insurance</div> -->
+    <a [routerLink]="['/contact']"  id="contact">Contact Us</a>
+    <a [routerLink]="['']" id="logout">Logout</a>
 </div>
 <div class="body">
     <!-- <span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Click here to view more information"> -->
@@ -34,7 +35,7 @@
                     third-party.
                     Limits of liability: are equal to the sum insured.</div>
             </div>
-            <button>Claim</button>
+            <button [routerLink]="['/owner']">Claim</button>
         </div>
         <div class="with3rd">
             <div class="box">
@@ -46,7 +47,7 @@
                     and any fixture during the insurance period caused by the collision with third party.
                     Limits of liability: are equal to the sum insured.</div>
             </div>
-            <button>Claim</button>
+            <button [routerLink]="['/thirdparty']">Claim</button>
         </div>
         <div class="flood">
             <div class="box">
@@ -57,7 +58,7 @@
                     equipment and any fixture during the insurance period caused by covered natural disaster.
                     Limits of liability: are equal to the sum insured.</div>
             </div>
-            <button>Claim</button>
+            <button [routerLink]="['/owner']">Claim</button>
         </div>
     </div>
 </div>
