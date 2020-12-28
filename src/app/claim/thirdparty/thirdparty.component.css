@@ -36,16 +36,14 @@ header{
     font-size: 20px;
     line-height: 50px;
     color:#2e0d70;
-    padding:15px 0px 5px 40px;
+    padding:15px 30px 5px 30px;
     width:100%;
     background: rgba(245, 249, 253, 0.97);
 }
-.input-field{
-    display: flex;
+.inputField{
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: space-between;
-    align-items: center;
-    border-bottom:5px dashed #58595E;
-    padding-bottom: 15px; 
 } 
 .inputField input{
     width: 300px;
@@ -59,7 +57,9 @@ header{
     outline: unset;
     padding-left: 30px;
     color: black;
+
 }
+
 .picture-area input{
     padding:60px 10px;
     background-color:lightgrey;
@@ -79,4 +79,12 @@ header{
 }
 .upload-area{
     text-align:center;
+}
+.left {
+    padding-right: 70px;
+    padding-top: 10px;
+}
+.right {
+    padding-left: 70px;
+    padding-top: 5px;
 }
