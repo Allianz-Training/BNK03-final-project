@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
+
 
 @Component({
   selector: 'app-claim-base',
@@ -8,14 +9,18 @@ import { Router } from '@angular/router';
 })
 export class ClaimBaseComponent implements OnInit {
 
-  name:string="Harry Styles";
-  insuranceNum:string="AB12345678"
-  carInfo:string="Toyota Camry 1GLJ-752";
-  state:string="claim";
-  
-  constructor() { }
+  name: string = "Harry Styles";
+  insuranceNum: string = "AB12345678"
+  carInfo: string = "Toyota Camry 1GLJ-752";
+  state: string = "claim";
+
+  constructor(private dataService: DataService) { }
+
+
 
   ngOnInit(): void {
   }
-
+  thirdPartyClaim() {
+    this.dataService.hasThirdParty = true;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 // import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -8,26 +9,29 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InformationComponent implements OnInit {
 
-      firstName:string="...something...";
-      lastName:string="...something...";
-      gender:string="...something...";
-      nationality:string="...something...";
-      idCard:string="...something...";
-      passport:string="...something...";
-      email:string="...something...";
-      birth:string="...something...";
-      phone:string="...something...";
-      carRegist:string="...something...";
-      brand:string="...something...";
-      year:string="...something...";
-      chassiNum:string="...something...";
-      insurranceNum:string="...something...";
-      occupation:string="...something..."
+      firstName:string="loading...";
+      lastName:string="loading...";
+      gender:string="loading...";
+      nationality:string="loading...";
+      idCard:string="loading...";
+      passport:string="loading...";
+      email:string="loading...";
+      birth:string="loading...";
+      phone:string="loading...";
+      carRegist:string="loading...";
+      brand:string="loading...";
+      year:string="loading...";
+      chassiNum:string="loading...";
+      insurranceNum:string="loading...";
+      occupation:string="loading..."
 
-  constructor() {
+  constructor(private dataService: DataService) {
    }
 
   ngOnInit(): void {
+    this.dataService.testGet("/albums").subscribe((data:any) => {
+      this.firstName = data[0].title;
+    })
   }
 
 }

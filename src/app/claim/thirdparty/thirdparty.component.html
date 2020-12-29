@@ -1,7 +1,7 @@
 <header> 
     <div><img [routerLink]="['/home']" id="left-arrow" src="../../../assets/right-arrow.png"/></div>
     <div id="title">Third Party Details</div>
-    <div><img [routerLink]="['/owner']" id="right-arrow" (click)="push()" src="../../../assets/right-arrow.png"/></div>
+    <div><img [routerLink]="['/owner']" id="right-arrow" (click)="next()" src="../../../assets/right-arrow.png"/></div>
 </header>
 
 <div class="body">
@@ -41,7 +41,7 @@
         <div id="description">Please upload the pictures of car registration and vehicle damaged.</div>
     </div>
     <div class="picture-area">
-        <input type="file"/>
-        <input type="file"/>
+        <input type="file" (change)="getFile1($event)"/>
+        <input type="file" id="fileInput2" (change)="getFile2($event)"/>
     </div>
 </div>

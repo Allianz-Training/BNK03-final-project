@@ -47,7 +47,8 @@
                     and any fixture during the insurance period caused by the collision with third party.
                     Limits of liability: are equal to the sum insured.</div>
             </div>
-            <button [routerLink]="['/thirdparty']">Claim</button>
+            <button (click)=thirdPartyClaim() [routerLink]="['/thirdparty']">Claim</button>
+            <!-- <button [routerLink]="['/thirdparty']">Claim</button> -->
         </div>
         <div class="flood">
             <div class="box">
