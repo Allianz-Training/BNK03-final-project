@@ -22,7 +22,7 @@
                 <span id="star" *ngIf="form.get('password')!.errors?.required">*</span>
             </div>
         </form>
-        <button (click)="home()" id="loginbtn">Login</button>
+        <button (click)="home()" id="loginbtn" [disabled]="!form.valid" >Login</button>
         <div class="under">
             <input type="checkbox" />
             <span id="remember-me">Remember me</span>

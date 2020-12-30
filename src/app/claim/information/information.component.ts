@@ -35,18 +35,18 @@ export class InformationComponent implements OnInit {
       this.firstName = data.message.firstName;
       this.lastName = data.message.lastName;
       this.gender = data.message.gender;
-      // this.nationality = data.
-      // this.idCard = data.
-      // this.passport = data.
-      // this.email = data.
-      // this.birth = data.
-      // this.phone = data.
-      // this.carRegist = data.
-      // this.brand = data.
-      // this.year = data.
-      // this.chassiNum = data.
-      // this.insurranceNum = data.
-      // this.occupation = data.
+      this.nationality = data.message.nationality;
+      this.idCard = data.message.idCardNumber;
+      this.passport = data.message.passport;
+      this.email = data.message.email;
+      this.birth = data.message.dateOfBirth;
+      this.phone = data.message.phone;
+      this.carRegist = data.message.carRegistration;
+      this.brand = data.message.brand;
+      this.year = data.message.year;
+      this.chassiNum = data.message.chassiNumber;
+      this.insurranceNum = data.message.insuranceAccountNumber;
+      this.occupation = data.message.occupation;
     })
   }
 

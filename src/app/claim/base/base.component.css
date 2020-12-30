@@ -82,7 +82,7 @@
 .info-box #state{
     text-align: right;   
     justify-content: end;
-    width: 70%;
+    width: 20%;
     padding: 20px;
     color: red;
     font-size: 16px;
@@ -90,13 +90,16 @@
 }
 .text {
     margin-top: -15px;
+    width: 60%;
+    
 }
 .text #name{
     font-weight: bold;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 50px;
     color: #115D81;
- 
+    display: flex;
+    flex-direction: row;
 }
 
 .list img{

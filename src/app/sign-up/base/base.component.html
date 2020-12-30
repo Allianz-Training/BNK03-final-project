@@ -40,7 +40,7 @@
             </div>
             <div>
                 <button [routerLink]="['/login']" class="btn">&lt; back</button>
-                <button class="btn" (click)="register()">next ></button>
+                <button class="btn" (click)="register()" [disabled]="!form.valid">next ></button>
             </div>
             <!-- <hr> -->
         </div>

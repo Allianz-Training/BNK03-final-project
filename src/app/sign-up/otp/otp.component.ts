@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-otp',
@@ -15,7 +16,7 @@ export class OtpComponent implements OnInit {
   @Input()
   otpValue4:string="";
   // otpValue: string[]=[];
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -35,6 +36,7 @@ export class OtpComponent implements OnInit {
       console.log("do something");
       let otp: string = this.otpValue1+this.otpValue2+this.otpValue3+this.otpValue4;
       alert(otp)
+      this.router.navigate(["home"])
     }
     
   }
