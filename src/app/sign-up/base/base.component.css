@@ -1,5 +1,5 @@
 div.body{
-    background-color:#D1DCEB;
+    background-color: #daf8ff;
     height: 100vh;
 }
 
@@ -68,8 +68,9 @@ div.body{
     font-size: 30px;
     font-size: 50px;
     line-height: 100px;
-    color:#2e0d70;
+    color:#351c66;
     margin:-5px 0px 5px 40px;
+    letter-spacing: 3px;
 }
 .btn{
     margin-top: -15px;
@@ -84,4 +85,9 @@ hr{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 500px;
     margin-top: 430px;
+}
+#star{
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
 }

@@ -1,6 +1,6 @@
 <div class="body">
-    <div class="navbar">    
-        <div></div>    
+    <div class="navbar">
+        <div></div>
         <a [routerLink]="['/register']" id="register">Register</a>
         <a [routerLink]="['']" id="about-us">About Us</a>
         <a [routerLink]="['/contact']" id="contact">
@@ -10,15 +10,18 @@
     <div class="login">
         <div id="welcome"> Welcome to BNKlaim!</div>
         <img src="../../../assets/car-insurance.png" />
-
-        <div class="input">
-            <em class="fa fa-user"></em>
-            <input type="text" id="username" placeholder="Username">
-        </div>
-        <div class="input">
-            <i class="fa fa-lock"></i>
-            <input type="text" id="password" placeholder="Password">
-        </div>
+        <form [formGroup]="form">
+            <div class="input">
+                <em class="fa fa-user"></em>
+                <input type="text" id="username" placeholder="Username" formControlName="userName">
+                <span id="star" *ngIf="form.get('userName')!.errors?.required">*</span>
+            </div>
+            <div class="input">
+                <i class="fa fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" formControlName="password">
+                <span id="star" *ngIf="form.get('password')!.errors?.required">*</span>
+            </div>
+        </form>
         <button (click)="home()" id="loginbtn">Login</button>
         <div class="under">
             <input type="checkbox" />

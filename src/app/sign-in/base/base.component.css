@@ -1,5 +1,5 @@
 div.body {
-    background-color: #DCDCDC;
+    background-color: #eef8ff;
     height: 100vh;
 }
 
@@ -10,13 +10,13 @@ div.body {
     font-size: 18px;
 }
 #register:hover{
-    color: whitesmoke;
+    color:gray;
 }
 #about-us:hover{
-    color: whitesmoke;
+    color:gray;
 }
 #contact:hover{
-    color: whitesmoke;
+    color:gray;
 }
 .login{
     text-align: center;
@@ -89,4 +89,9 @@ hr{
     width: 60%;
     height: 0px;
     background-color: #D8D3D3 ;
+}
+#star{
+    color: red;
+    font-size: 26px;
+    font-weight: bold;
 }

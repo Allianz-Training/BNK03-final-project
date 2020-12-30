@@ -29,8 +29,24 @@ export class InformationComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.dataService.testGet("/albums").subscribe((data:any) => {
-      this.firstName = data[0].title;
+    this.dataService.testGet("/user/information/123456789012").subscribe((data:any) => {
+      console.log(data.message);
+      
+      this.firstName = data.message.firstName;
+      this.lastName = data.message.lastName;
+      this.gender = data.message.gender;
+      // this.nationality = data.
+      // this.idCard = data.
+      // this.passport = data.
+      // this.email = data.
+      // this.birth = data.
+      // this.phone = data.
+      // this.carRegist = data.
+      // this.brand = data.
+      // this.year = data.
+      // this.chassiNum = data.
+      // this.insurranceNum = data.
+      // this.occupation = data.
     })
   }
 

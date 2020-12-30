@@ -9,6 +9,7 @@ export class DataService {
   hasThirdParty: boolean = false;
   insuranceAccountNumber:String | undefined ;
 
+  private BACKEND_URI = "http://localhost:8080"
   private REST_API_SERVER = "http://jsonplaceholder.typicode.com";
 
   caseDetail = {
@@ -19,6 +20,6 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   public testGet(route: string){
-    return this.httpClient.get(this.REST_API_SERVER+route);
+    return this.httpClient.get(this.BACKEND_URI+route);
   }
 }

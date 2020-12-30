@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'sign-in-base',
@@ -9,18 +10,21 @@ import { DataService } from 'src/app/data.service';
 })
 export class SignInBaseComponent implements OnInit {
   test:any=[];
-  constructor(private router: Router, private dataService: DataService) {}
+  
+  form: FormGroup;
+
+  constructor(private router: Router, private dataService: DataService, private builder: FormBuilder) {
+    this.form = this.builder.group({
+      userName: ['',[Validators.required]],
+      password: ['',[Validators.required]]
+   })}
 
   ngOnInit(): void {
-    this.dataService.testGet().subscribe((data) => {
-      console.log(data);
-      this.test = data;
-      console.log(this.test);
-      
-    })    
+
   }
 
   home(){
     this.router.navigate(["home"])
+    console.log(this.form.value)
   }
 }

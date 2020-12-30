@@ -41,13 +41,13 @@
     display: flex;
     flex-direction: column ;
     align-items: center;
-    background: #c3d4ee;
+    background: #202222;
     height: 90%;
     padding-bottom: 15px;
 }
 
 .info-box {
-    background: #FFFFFF;
+    background: #FFFFFC;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     width: 70%;
@@ -109,11 +109,12 @@
     text-align: center;
 }
 .box{
-    padding: 25px;
+    padding: 17px;
     border-radius: 20px;
-    background: black;
-    color: white;
+    background: #6CCFF6;
+    color: black;
     margin: 10px;
+    font-weight: bold;
 }
 
 .box img{
@@ -121,7 +122,7 @@
 }
 
 .without3rd .box:hover, .with3rd .box:hover, .flood .box:hover{
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 7px rgba(255, 255, 255, 0.384);
 }
 
 button{
@@ -138,6 +139,6 @@ button{
 }
 
 button:hover{
-    color:salmon;
+    color:rgb(67, 140, 189);
     font-size: 18px;
 }
