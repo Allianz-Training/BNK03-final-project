@@ -6,7 +6,7 @@ import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-owner',
   templateUrl: './owner.component.html',
-  styleUrls: ['./owner.component.css']
+  styleUrls: ['./owner.component.css'],
 })
 export class OwnerComponent implements OnInit {
   file1!: File;
@@ -16,49 +16,57 @@ export class OwnerComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private builder: FormBuilder, private dataService : DataService, private router : Router) {
+  constructor(
+    private builder: FormBuilder,
+    private dataService: DataService,
+    private router: Router
+  ) {
     this.form = this.builder.group({
-      text: ['']
-    })
+      text: [''],
+    });
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  
-  back() { 
+  back() {
     console.log(this.dataService.hasThirdParty);
-    if(this.dataService.hasThirdParty === true){
+    if (this.dataService.hasThirdParty === true) {
       this.dataService.hasThirdParty = false;
-      this.router.navigate(["thirdparty"]);
+      this.router.navigate(['thirdparty']);
     } else {
-      this.router.navigate(["home"]);
+      this.router.navigate(['home']);
     }
   }
 
   finish() {
-    let formData =this.form.value;
+    let formData = this.form.value;
     formData.ownerImage1 = this.file1Base64;
-    formData.ownerImage2 = this.file2Base64; 
-    
-    this.dataService.caseDetail.customerCaseDetail=formData
+    formData.ownerImage2 = this.file2Base64;
+
+    this.dataService.caseDetail.customerCaseDetail = formData;
     console.log(this.dataService.caseDetail);
-    
+
+    this.dataService
+      .post('/claim/case', this.dataService.caseDetail, {})
+      .subscribe((data: any) => {
+        console.log(data);
+      });
   }
 
-  async getFile1(fileInput: any){
+  async getFile1(fileInput: any) {
     this.file1 = fileInput.target.files[0];
-     this.file1Base64 = await this.toBase64(this.file1);
+    this.file1Base64 = await this.toBase64(this.file1);
   }
-  async getFile2(fileInput: any){
+  async getFile2(fileInput: any) {
     this.file2 = fileInput.target.files[0];
-     this.file2Base64 = await this.toBase64(this.file2);
+    this.file2Base64 = await this.toBase64(this.file2);
   }
 
-  toBase64 = (file: File) => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
-});
+  toBase64 = (file: File) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
 }
