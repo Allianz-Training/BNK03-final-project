@@ -25,4 +25,8 @@ export class DataService {
   public post(route: string, body: any, header: any) {
     return this.httpClient.post(this.BACKEND_URI + route, body, header);
   }
+
+  public put(route: string, body: any, header: any) {
+    return this.httpClient.put(this.BACKEND_URI + route, body, header);
+  }
 }
