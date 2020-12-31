@@ -37,6 +37,14 @@ export class SignInBaseComponent implements OnInit {
       (error: HttpErrorResponse) => {
         // this can change to custom message
         alert(error.error.message);
+
+        /**if(error.error.status == 404<~etc>) {
+         *    // do something
+         * } else if () {
+         *    // do anotherthing
+         * } else {}
+         *
+         */
       }
     );
   }
