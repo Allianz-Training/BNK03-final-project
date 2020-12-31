@@ -32,7 +32,7 @@ export class SignUpBaseComponent implements OnInit {
 
     let formData = this.form.value;
     this.dataService
-      .put('/accounts/login', formData, {})
+      .put('/accounts/register', formData, {})
       .subscribe((data: any) => {
         console.log(data);
       });

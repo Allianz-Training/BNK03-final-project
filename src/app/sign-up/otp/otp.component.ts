@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-otp',
@@ -16,7 +17,7 @@ export class OtpComponent implements OnInit {
   @Input()
   otpValue4:string="";
   // otpValue: string[]=[];
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dataService: DataService) { }
 
   ngOnInit(): void {
   }
@@ -37,6 +38,11 @@ export class OtpComponent implements OnInit {
       let otp: string = this.otpValue1+this.otpValue2+this.otpValue3+this.otpValue4;
       alert(otp)
       this.router.navigate(["home"])
+      this.dataService
+      .put('/accounts/register/otp', otp, {})
+      .subscribe((data: any) => {
+        console.log(data);
+      });
     }
     
   }
