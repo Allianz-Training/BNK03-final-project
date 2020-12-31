@@ -16,8 +16,8 @@ export class SignInBaseComponent implements OnInit {
 
   constructor(private router: Router, private dataService: DataService, private builder: FormBuilder) {
     this.form = this.builder.group({
-      userName: ['',[Validators.required]],
-      password: ['',[Validators.required]]
+      email: ['',[Validators.required]],
+      temporaryPassword: ['',[Validators.required]]
    })}
 
   ngOnInit(): void {
@@ -25,7 +25,23 @@ export class SignInBaseComponent implements OnInit {
   }
 
   home(){
-    this.router.navigate(["home"])
-    console.log(this.form.value)
+      
+
+    let formData = this.form.value;
+    let status = this.dataService
+      .post('/accounts/login', formData, {})
+      .subscribe((data: any) => {
+        console.log(data);
+        
+        if(data.status == "200"){
+        // do
+        this.router.navigate(["home"])
+        console.log(this.form.value)
+     
+        } 
+        else {alert("Incorrect Email or Password");}
+    });
+
+    
   }
 }

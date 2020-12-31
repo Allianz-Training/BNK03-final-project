@@ -13,13 +13,13 @@
         <form [formGroup]="form">
             <div class="input">
                 <em class="fa fa-user"></em>
-                <input type="text" id="username" placeholder="Username" formControlName="userName">
-                <span id="star" *ngIf="form.get('userName')!.errors?.required">*</span>
+                <input type="text" id="username" placeholder="email" formControlName="email">
+                <span id="star" *ngIf="form.get('email')!.errors?.required">*</span>
             </div>
             <div class="input">
                 <i class="fa fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" formControlName="password">
-                <span id="star" *ngIf="form.get('password')!.errors?.required">*</span>
+                <input type="password" id="password" placeholder="Password" formControlName="temporaryPassword">
+                <span id="star" *ngIf="form.get('temporaryPassword')!.errors?.required">*</span>
             </div>
         </form>
         <button (click)="home()" id="loginbtn" [disabled]="!form.valid" >Login</button>
