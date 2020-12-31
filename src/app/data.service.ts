@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   hasThirdParty: boolean = false;
-  insuranceAccountNumber: string | undefined;
+  insuranceAccountNumber: string = '';
 
   private BACKEND_URI = 'http://localhost:8080';
   // private REST_API_SERVER = 'http://jsonplaceholder.typicode.com';
