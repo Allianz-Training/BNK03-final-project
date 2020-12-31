@@ -1,6 +1,6 @@
 table {
     border: 2px solid darkgray;
-    background-color: #9fc9b4;
+    background-color: #7c9fc0;
     width: 70%;
     line-height: 50px;
     font-weight: bold;
@@ -12,7 +12,7 @@ body{
     justify-content: center;
     width: 100%;
     height: calc( 100% - 80px );
-    background-color:#d1fff6;
+    background-color:#d1e3ff;
 }
 td{
     padding-left: 30px;

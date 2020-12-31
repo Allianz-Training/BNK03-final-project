@@ -35,7 +35,9 @@ export class ThirdpartyComponent implements OnInit {
     formData.carRegistrationImage = this.file1Base64;
     formData.licenseImage = this.file2Base64; 
     
-    this.dataService.caseDetail.thirdPartyDetail=formData
+    this.dataService.caseDetail.thirdPartyDetail=formData;
+    console.log(this.form.value);
+   
   }
 
   async getFile1(fileInput: any){
@@ -53,4 +55,5 @@ export class ThirdpartyComponent implements OnInit {
     reader.onload = () => resolve(reader.result);
     reader.onerror = error => reject(error);
 });
+
 }

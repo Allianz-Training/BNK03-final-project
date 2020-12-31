@@ -1,6 +1,6 @@
 header{
-    height: 100px;
-    background-color: #000033;
+    height: 95px;
+    background-color: #1e3166;
     color: #F8F3EA;
     font-size: 48px;
     display:grid;
@@ -38,7 +38,7 @@ header{
     color:#2e0d70;
     padding:15px 30px 5px 30px;
     width:100%;
-    background: rgba(245, 249, 253, 0.97);
+    background: rgba(245, 249, 253, 0.863);
 }
 .inputField{
     display: grid;

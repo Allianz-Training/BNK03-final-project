@@ -1,5 +1,5 @@
 div.body{
-    background-color: #daf8ff;
+    background-color: #e1f5ff;
     height: 100vh;
 }
 
@@ -66,11 +66,12 @@ div.body{
 .register{
     text-align: center;
     font-size: 30px;
-    font-size: 50px;
+    font-size: 45px;
     line-height: 100px;
-    color:#351c66;
+    color:#4c517c;
     margin:-5px 0px 5px 40px;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+    font-weight: bold;
 }
 .btn{
     margin-top: -15px;

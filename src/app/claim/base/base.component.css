@@ -41,19 +41,19 @@
     display: flex;
     flex-direction: column ;
     align-items: center;
-    background: #202222;
+    background: #e0e6f0;
     height: 90%;
     padding-bottom: 15px;
 }
 
 .info-box {
-    background: #FFFFFC;
+    background: #f5f5f5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     width: 70%;
     height: 25%;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 18px;
+    margin-bottom: 8px;
     display: inline-flex;
     align-items: center;
     padding-top: 5px;
@@ -114,10 +114,10 @@
 .box{
     padding: 17px;
     border-radius: 20px;
-    background: #6CCFF6;
-    color: black;
-    margin: 10px;
-    font-weight: bold;
+    background:#12305e;
+    color: whitesmoke;
+    margin: 9px;
+    /* font-weight: bold; */
 }
 
 .box img{
@@ -125,7 +125,7 @@
 }
 
 .without3rd .box:hover, .with3rd .box:hover, .flood .box:hover{
-    box-shadow: 0px 7px 7px rgba(255, 255, 255, 0.384);
+    box-shadow: 0px 7px 7px rgba(3, 3, 3, 0.384);
 }
 
 button{
@@ -139,9 +139,11 @@ button{
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-weight: bold;
     font-size: 16px;
+    background-color: rgba(118, 125, 134, 0.938);
+    color:#cfd7e4
 }
 
 button:hover{
-    color:rgb(67, 140, 189);
+    color:rgb(255, 255, 255);
     font-size: 18px;
 }

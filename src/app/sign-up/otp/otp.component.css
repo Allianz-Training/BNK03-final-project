@@ -1,6 +1,6 @@
 .register{
 	height: 100vh;
-	background-color: rgb(245, 246, 247);
+	background-color: rgb(243, 239, 239);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .frm{
-	background: #92c1cf;
+	background: #3b9bb8e0;
 	border-radius: 30px;
 	width: 500px;
 	height: 400px;
