@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/data.service';
+
 
 @Component({
   selector: 'app-claim-base',
@@ -7,24 +7,12 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./base.component.css'],
 })
 export class ClaimBaseComponent implements OnInit {
-  name: string = 'Harry Styles';
-  insuranceNum: string = 'AB12345678';
-  carInfo: string = 'Toyota Camry 1GLJ-752';
-  state: string = 'claim';
+  
 
-  constructor(private dataService: DataService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.dataService
-      .get('/user/information/123456789012')
-      .subscribe((data: any) => {
-        this.name = data.message.firstName + ' ' + data.message.lastName;
-        this.insuranceNum = data.message.insuranceAccountNumber;
-        this.carInfo = data.message.brand + ' ' + data.message.year;
-        this.state = data.message.claimState;
-      });
+   
   }
-  thirdPartyClaim() {
-    this.dataService.hasThirdParty = true;
-  }
+  
 }

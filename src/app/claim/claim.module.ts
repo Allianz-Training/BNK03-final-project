@@ -6,9 +6,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThirdpartyComponent } from './thirdparty/thirdparty.component';
 import { OwnerComponent } from './owner/owner.component';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { ShowInfoComponent } from './show-info/show-info.component';
+import { ListClaimComponent } from './list-claim/list-claim.component';
 
 @NgModule({
-  declarations: [ClaimBaseComponent, InformationComponent, ThirdpartyComponent, OwnerComponent],
+  declarations: [ClaimBaseComponent, InformationComponent, ThirdpartyComponent, OwnerComponent, HeaderComponent, ShowInfoComponent, ListClaimComponent],
   imports: [
     CommonModule,FormsModule, ReactiveFormsModule,RouterModule
   ],
