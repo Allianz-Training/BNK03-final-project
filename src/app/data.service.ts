@@ -9,8 +9,8 @@ export class DataService {
   hasThirdParty: boolean = false;
   insuranceAccountNumber: string = '';
 
-  private BACKEND_URI = 'http://localhost:8080';
-  // private REST_API_SERVER = 'http://jsonplaceholder.typicode.com';
+  private BACKEND_URI = 'http://ec2-54-179-82-140.ap-southeast-1.compute.amazonaws.com';
+
 
   caseDetail = {
     thirdPartyDetail: {},

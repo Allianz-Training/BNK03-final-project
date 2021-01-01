@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-list-claim',
   templateUrl: './list-claim.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListClaimComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
   }
-
+  thirdPartyClaim() {
+    this.dataService.hasThirdParty = true;
+  }
 }

@@ -23,7 +23,5 @@ export class ShowInfoComponent implements OnInit {
       this.state = data.message.claimState;
     });
   }
-  thirdPartyClaim() {
-    this.dataService.hasThirdParty = true;
-  }
+  
 }
