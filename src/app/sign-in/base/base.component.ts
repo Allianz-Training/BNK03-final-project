@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { DataService } from 'src/app/data.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'sign-in-base',
@@ -10,42 +6,15 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./base.component.css'],
 })
 export class SignInBaseComponent implements OnInit {
+  imgUrl:string = "../../../assets/car-insurance.png"
+  contentHeader:string = "Welcome to BNKlaim!"
   test: any = [];
 
-  form: FormGroup;
+  
 
-  constructor(
-    private router: Router,
-    private dataService: DataService,
-    private builder: FormBuilder
-  ) {
-    this.form = this.builder.group({
-      email: ['', [Validators.required]],
-      temporaryPassword: ['', [Validators.required]],
-    });
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 
-  home() {
-    let formData = this.form.value;
-    this.dataService.post('/accounts/login', formData, {}).subscribe(
-      (body: Object) => {
-        console.log(body);
-        this.router.navigate(['home']);
-      },
-      (error: HttpErrorResponse) => {
-        // this can change to custom message
-        alert(error.error.message);
-
-        /**if(error.error.status == 404<~etc>) {
-         *    // do something
-         * } else if () {
-         *    // do anotherthing
-         * } else {}
-         *
-         */
-      }
-    );
-  }
+  
 }

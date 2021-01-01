@@ -1,37 +1,7 @@
 <div class="body">
-    <div class="navbar">
-        <div></div>
-        <a [routerLink]="['/register']" id="register">Register</a>
-        <a [routerLink]="['']" id="about-us">About Us</a>
-        <a [routerLink]="['/contact']" id="contact">
-            Contact
-        </a>
-    </div>
+    <app-navs></app-navs>
     <div class="login">
-        <div id="welcome"> Welcome to BNKlaim!</div>
-        <img src="../../../assets/car-insurance.png" />
-        <form [formGroup]="form">
-            <div class="input">
-                <em class="fa fa-user"></em>
-                <input type="text" id="username" placeholder="email" formControlName="email">
-                <span id="star" *ngIf="form.get('email')!.errors?.required">*</span>
-            </div>
-            <div class="input">
-                <i class="fa fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" formControlName="temporaryPassword">
-                <span id="star" *ngIf="form.get('temporaryPassword')!.errors?.required">*</span>
-            </div>
-        </form>
-        <button (click)="home()" id="loginbtn" [disabled]="!form.valid" >Login</button>
-        <div class="under">
-            <input type="checkbox" />
-            <span id="remember-me">Remember me</span>
-            <span id="forgot-password">Forgot password</span>
-        </div>
-
+        <app-login-form [imgUrl]="imgUrl" [contentHeader]="contentHeader"></app-login-form>
     </div>
-    <hr>
-    <div class="bottom">
-        <a [routerLink]="['/register']">Create Account</a>
-    </div>
+    <app-bottom-link></app-bottom-link>
 </div>
