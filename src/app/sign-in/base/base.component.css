@@ -3,15 +3,6 @@ div.body {
     height: 100vh;
 }
 
-#register:hover{
-    color:gray;
-}
-#about-us:hover{
-    color:gray;
-}
-#contact:hover{
-    color:gray;
-}
 .login{
     text-align: center;
     display: flex;

@@ -5,7 +5,7 @@ import { LandingPageBaseComponent } from './landing-page/base/base.component';
 import { SignInBaseComponent } from './sign-in/base/base.component';
 import { SignUpBaseComponent } from './sign-up/base/base.component';
 import { OtpComponent } from './sign-up/otp/otp.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/base/base.component';
 import { OwnerComponent } from './claim/owner/owner.component'
 import { ThirdpartyComponent } from './claim/thirdparty/thirdparty.component';
 import { InformationComponent} from './claim/information/information.component';

@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc( 100% - 80px );
+    background-color:#d1e3ff;
+}
+h1{
+    position: absolute;
+    margin-top: -30%;
+    color: rgb(160, 153, 146);
+    font-size: 40px;
+    letter-spacing: 5px;
+}

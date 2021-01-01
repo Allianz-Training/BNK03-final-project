@@ -1,0 +1,77 @@
+<form [formGroup]="form">
+    <div class="input-field">
+      <div>
+        <img src="../../../assets/identification.png" />
+        <input
+          class="short-input"
+          placeholder="First Name"
+          type="text"
+          formControlName="firstName"
+        />
+        <span id="star" *ngIf="form.get('firstName')!.errors?.required">*</span>
+        <input
+          class="short-input"
+          placeholder="Last Name"
+          type="text"
+          formControlName="lastName"
+        />
+        <span id="star" *ngIf="form.get('lastName')!.errors?.required">*</span>
+      </div>
+      <div>
+        <img src="../../../assets/mail.png" />
+        <input
+          class="long-input"
+          placeholder="E-mail"
+          type="text"
+          formControlName="email"
+        />
+        <span id="star" *ngIf="form.get('email')!.errors?.required">*</span>
+        <span id="star" *ngIf="form.get('email')!.errors?.email">*</span>
+      </div>
+      <div>
+        <img src="../../../assets/insurance.png" />
+        <input
+          class="long-input"
+          placeholder="Insurance Number"
+          type="text"
+          formControlName="insuranceAccountNumber"
+        />
+        <span
+          id="star"
+          *ngIf="form.get('insuranceAccountNumber')!.errors?.required"
+          >*</span
+        >
+      </div>
+      <div>
+        <img src="../../../assets/password.png" />
+        <input
+          class="long-input"
+          placeholder="New Password"
+          type="text"
+          formControlName="temporaryPassword"
+        />
+        <span id="star" *ngIf="form.get('temporaryPassword')!.errors?.required"
+          >*</span
+        >
+      </div>
+      <div>
+        <img src="../../../assets/check-circle-regular.svg" />
+        <input
+          class="long-input"
+          placeholder="Confirm Password"
+          type="text"
+          formControlName="comfirmPassword"
+        />
+        <span id="star" *ngIf="form.get('comfirmPassword')!.errors?.required"
+          >*</span
+        >
+      </div>
+      <div>
+        <button [routerLink]="['/login']" class="btn">&lt; back</button>
+        <button class="btn" (click)="register()" [disabled]="!form.valid">
+          next >
+        </button>
+      </div>
+ 
+    </div>
+  </form>
