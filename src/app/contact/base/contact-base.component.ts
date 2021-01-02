@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
-  templateUrl: './base.component.html',
-  styleUrls: ['./base.component.css']
+  templateUrl: './contact-base.component.html',
+  styleUrls: ['./contact-base.component.css'],
 })
 export class ContactComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
