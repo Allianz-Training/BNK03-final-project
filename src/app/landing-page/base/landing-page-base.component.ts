@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'landing-page-base',
@@ -36,7 +37,9 @@ export class LandingPageBaseComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dataService.isSignIn = false;
+  }
 }

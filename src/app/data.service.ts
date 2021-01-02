@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class DataService {
+  isSignIn: boolean = false;
   hasThirdParty: boolean = false;
   insuranceAccountNumber: string = '';
 
@@ -20,8 +21,8 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public get(route: string, header: any) {
-    return this.httpClient.get(this.BACKEND_URI + route, header);
+  public get(route: string) {
+    return this.httpClient.get(this.BACKEND_URI + route);
   }
 
   public post(route: string, body: any, header: any) {

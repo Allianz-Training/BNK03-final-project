@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-claim-base',
@@ -44,7 +46,11 @@ export class ClaimBaseComponent implements OnInit {
       route: '/owner',
     },
   ];
-  constructor() {}
+  constructor(private dataService: DataService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!this.dataService.isSignIn) {
+      this.router.navigate(['']);
+    }
+  }
 }

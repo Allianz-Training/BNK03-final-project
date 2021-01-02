@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
@@ -26,7 +26,11 @@ export class OwnerComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!this.dataService.isSignIn) {
+      this.router.navigate(['']);
+    }
+  }
 
   back() {
     console.log(this.dataService.hasThirdParty);
@@ -42,15 +46,23 @@ export class OwnerComponent implements OnInit {
     let formData = this.form.value;
     formData.ownerImage1 = this.file1Base64;
     formData.ownerImage2 = this.file2Base64;
+    formData.insuranceAccountNumber = this.dataService.insuranceAccountNumber;
 
     this.dataService.caseDetail.customerCaseDetail = formData;
     console.log(this.dataService.caseDetail);
 
     this.dataService
       .post('/claim/case', this.dataService.caseDetail, {})
-      .subscribe((data: any) => {
-        console.log(data);
-      });
+      .subscribe(
+        () => {
+          alert('Success');
+          this.router.navigate(['home']);
+        },
+        () => {
+          alert('An error occur, please try again or contact admin.');
+          this.router.navigate(['contact']);
+        }
+      );
   }
 
   async getFile1(fileInput: any) {

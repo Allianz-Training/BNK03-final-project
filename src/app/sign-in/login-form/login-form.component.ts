@@ -33,6 +33,7 @@ export class LoginFormComponent implements OnInit {
       (body: any) => {
         console.log(body);
         this.dataService.insuranceAccountNumber = body.insuranceNumber;
+        this.dataService.isSignIn = true;
         this.router.navigate(['home']);
       },
       (error: HttpErrorResponse) => {

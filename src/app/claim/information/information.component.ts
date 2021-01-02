@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 // import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -24,29 +25,33 @@ export class InformationComponent implements OnInit {
   insurranceNum: string = 'loading...';
   occupation: string = 'loading...';
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private router: Router) {}
 
   ngOnInit(): void {
-    this.dataService
-      .get('/user/information/' + this.dataService.insuranceAccountNumber, {})
-      .subscribe((data: any) => {
-        console.log(data.message);
+    if (!this.dataService.isSignIn) {
+      this.router.navigate(['']);
+    } else {
+      this.dataService
+        .get('/user/information/' + this.dataService.insuranceAccountNumber)
+        .subscribe((data: any) => {
+          console.log(data.message);
 
-        this.firstName = data.message.firstName;
-        this.lastName = data.message.lastName;
-        this.gender = data.message.gender;
-        this.nationality = data.message.nationality;
-        this.idCard = data.message.idCardNumber;
-        this.passport = data.message.passport;
-        this.email = data.message.email;
-        this.birth = data.message.dateOfBirth;
-        this.phone = data.message.phone;
-        this.carRegist = data.message.carRegistration;
-        this.brand = data.message.brand;
-        this.year = data.message.year;
-        this.chassiNum = data.message.chassiNumber;
-        this.insurranceNum = data.message.insuranceAccountNumber;
-        this.occupation = data.message.occupation;
-      });
+          this.firstName = data.message.firstName;
+          this.lastName = data.message.lastName;
+          this.gender = data.message.gender;
+          this.nationality = data.message.nationality;
+          this.idCard = data.message.idCardNumber;
+          this.passport = data.message.passport;
+          this.email = data.message.email;
+          this.birth = data.message.dateOfBirth;
+          this.phone = data.message.phone;
+          this.carRegist = data.message.carRegistration;
+          this.brand = data.message.brand;
+          this.year = data.message.year;
+          this.chassiNum = data.message.chassiNumber;
+          this.insurranceNum = data.message.insuranceAccountNumber;
+          this.occupation = data.message.occupation;
+        });
+    }
   }
 }

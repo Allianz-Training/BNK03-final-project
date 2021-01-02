@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'info',
     component: InformationComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'home',
+  },
 ];
 
 @NgModule({
