@@ -1,47 +1,10 @@
-<div class="list">
-  <div class="without3rd">
-    <div class="box">
-      <img src="../../../assets/broken.png" alt="car-broken" />
-      <div class="type">
-        Own damages – collision without third party<br /><br />
-
-        The company compensates for damages to the vehicle, including specified
-        additional accessories, equipment and any fixture during the insurance
-        period caused by collision, overturning or no involved third-party.
-        Limits of liability: are equal to the sum insured.
-      </div>
+<div class="list-item">
+  <div class="box">
+    <img src="{{ imgUrl }}" alt="car-image" />
+    <div class="type">
+      {{ contentHeader }}<br /><br />
+      {{ contentDescription }}
     </div>
-    <button [routerLink]="['/owner']">Claim</button>
   </div>
-  <div class="with3rd">
-    <div class="box">
-      <img src="../../../assets/car-crash.png" alt="car-crash" />
-      <div class="type">
-        Own damages – collision with third party<br /><br />
-
-        The company will compensate for damages to the vehicle including
-        specified additional accessories, equipment and any fixture during the
-        insurance period caused by the collision with third party. Limits of
-        liability: are equal to the sum insured.
-      </div>
-    </div>
-    <button (click)="thirdPartyClaim()" [routerLink]="['/thirdparty']">
-      Claim
-    </button>
-    <!-- <button [routerLink]="['/thirdparty']">Claim</button> -->
-  </div>
-  <div class="flood">
-    <div class="box">
-      <img src="../../../assets/flood.png" alt="flood" />
-      <div class="type">
-        Natural disaster, including flood<br /><br />
-
-        The company will compensate for damages to the vehicle, including
-        specified additional accessories, equipment and any fixture during the
-        insurance period caused by covered natural disaster. Limits of
-        liability: are equal to the sum insured.
-      </div>
-    </div>
-    <button [routerLink]="['/owner']">Claim</button>
-  </div>
+  <button (click)="check()" [routerLink]="[route]">Claim</button>
 </div>

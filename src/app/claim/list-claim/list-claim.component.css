@@ -1,46 +1,42 @@
-
-.list img{
-    width: 80px;
-    height: 80px;
-}
-.list{
-    display: inline-flex;
-    /* justify-content: center; */
-    text-align: center;
-}
-.box{
-    padding: 17px;
-    border-radius: 20px;
-    background:#12305e;
-    color: whitesmoke;
-    margin: 9px;
-    /* font-weight: bold; */
+img {
+  width: 80px;
+  height: 80px;
 }
 
-.box img{
-    margin-bottom: 10px;
+.box {
+  padding: 17px;
+  border-radius: 20px;
+  background: #12305e;
+  color: whitesmoke;
+  margin: 9px;
+  /* font-weight: bold; */
 }
 
-.without3rd .box:hover, .with3rd .box:hover, .flood .box:hover{
-    box-shadow: 0px 7px 7px rgba(3, 3, 3, 0.384);
+.box img {
+  margin-bottom: 10px;
 }
 
-button{
-    margin: 10px;
-    border-radius: 20px;
-    border: unset;
-    outline: unset;
-    padding:5px;
-    width: 100px;
-    height: 40px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-weight: bold;
-    font-size: 16px;
-    background-color: rgba(118, 125, 134, 0.938);
-    color:#cfd7e4
+.list-item .box:hover {
+  box-shadow: 0px 7px 7px rgba(3, 3, 3, 0.384);
+  flex-basis: auto;
 }
 
-button:hover{
-    color:rgb(255, 255, 255);
-    font-size: 18px;
+button {
+  margin: 10px;
+  border-radius: 20px;
+  border: unset;
+  outline: unset;
+  padding: 5px;
+  width: 100px;
+  height: 40px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  font-size: 16px;
+  background-color: rgba(118, 125, 134, 0.938);
+  color: #cfd7e4;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
 }

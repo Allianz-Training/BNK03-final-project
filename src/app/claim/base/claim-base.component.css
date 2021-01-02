@@ -7,3 +7,9 @@
   height: calc(100% - 80px);
   /* padding-bottom: 15px; */
 }
+.list {
+  display: flex;
+  /* justify-content: center; */
+  text-align: center;
+  flex-basis: auto;
+}

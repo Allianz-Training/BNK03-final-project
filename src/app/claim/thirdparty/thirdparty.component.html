@@ -1,47 +1,63 @@
-<header> 
-    <div><img [routerLink]="['/home']" id="left-arrow" src="../../../assets/right-arrow.png"/></div>
-    <div id="title">Third Party Details</div>
-    <div><img [routerLink]="['/owner']" id="right-arrow" (click)="next()" src="../../../assets/right-arrow.png"/></div>
+<header>
+  <div>
+    <img
+      [routerLink]="['/home']"
+      id="left-arrow"
+      src="../../../assets/right-arrow.png"
+      alt="back"
+    />
+  </div>
+  <div id="title">Third Party Details</div>
+  <div>
+    <img
+      [routerLink]="['/owner']"
+      id="right-arrow"
+      (click)="next()"
+      src="../../../assets/right-arrow.png"
+      alt="next"
+    />
+  </div>
 </header>
 
 <div class="body">
-    <form [formGroup]="form" class="left">
-        <div class="inputField">
-            <div>First Name</div>
-            <input type="text" formControlName="firstname"/>
-        </div>
-        <div class="inputField">
-            <div>Car registration</div>
-            <input type="text" formControlName="carRegistNum"/>
-        </div>
-         <div class="inputField">
-            <div>Date of accident </div>
-            <input type="date" formControlName="date"/>
-        </div>
-    </form>
-    <form [formGroup]="form" class="right">
-        <div class="inputField">
-            <div>Last Name</div>
-            <input type="text" formControlName="lastName"/>
-        </div>
-        <div class="inputField">
-            <div>Phone number</div>
-            <input type="text" formControlName="phoneNum"/>
-        </div>
-        <div class="inputField">
-            <div>Time</div>
-            <input type="time" formControlName="time"/>
-        </div>
-    </form>
-
+  <form [formGroup]="form" class="left">
+    <div class="inputField">
+      <div>First Name</div>
+      <input type="text" formControlName="firstname" />
+    </div>
+    <div class="inputField">
+      <div>Car registration</div>
+      <input type="text" formControlName="carRegistNum" />
+    </div>
+    <div class="inputField">
+      <div>Date of accident</div>
+      <input type="date" formControlName="date" />
+    </div>
+  </form>
+  <form [formGroup]="form" class="right">
+    <div class="inputField">
+      <div>Last Name</div>
+      <input type="text" formControlName="lastName" />
+    </div>
+    <div class="inputField">
+      <div>Phone number</div>
+      <input type="text" formControlName="phoneNum" />
+    </div>
+    <div class="inputField">
+      <div>Time</div>
+      <input type="time" formControlName="time" />
+    </div>
+  </form>
 </div>
 <div class="upload-area">
-    <div class="txt">
-        <div id="title2">Upload your pictures here</div>
-        <div id="description">Please upload the pictures of car registration and vehicle damaged.</div>
+  <div class="txt">
+    <div id="title2">Upload your pictures here</div>
+    <div id="description">
+      Please upload the pictures of car registration and vehicle damaged.
     </div>
-    <div class="picture-area">
-        <input type="file" (change)="getFile1($event)"/>
-        <input type="file" id="fileInput2" (change)="getFile2($event)"/>
-    </div>
+  </div>
+  <div class="picture-area">
+    <input type="file" (change)="getFile1($event)" />
+    <input type="file" id="fileInput2" (change)="getFile2($event)" />
+  </div>
 </div>

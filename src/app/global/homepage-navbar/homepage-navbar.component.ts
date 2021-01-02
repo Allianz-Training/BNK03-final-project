@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-homepage-navbar',
@@ -9,9 +10,11 @@ export class HomepageNavbarComponent implements OnInit {
   @Input()
   routes: Array<any> = [];
 
-  constructor() {}
+  constructor(private dataService: DataService) {}
 
-  ngOnInit(): void {
-    console.log(this.routes);
+  ngOnInit(): void {}
+
+  check() {
+    console.log(this.dataService);
   }
 }

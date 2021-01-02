@@ -6,5 +6,14 @@
 ></app-homepage-navbar>
 <div class="body">
   <app-show-info></app-show-info>
-  <app-list-claim></app-list-claim>
+  <div class="list">
+    <app-list-claim
+      *ngFor="let claim of listClaim"
+      [imgUrl]="claim.imgUrl"
+      [contentHeader]="claim.contentHeader"
+      [contentDescription]="claim.contentDescription"
+      [onClick]="claim.onClick"
+      [route]="claim.route"
+    ></app-list-claim>
+  </div>
 </div>

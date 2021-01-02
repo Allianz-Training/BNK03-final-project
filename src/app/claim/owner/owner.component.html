@@ -1,18 +1,33 @@
-<img (click)="back()" id="arrow" src="../../../assets/right-arrow.png"/>
-<header>    
-    <span>Your Details</span>
+<img
+  (click)="back()"
+  id="arrow"
+  src="../../../assets/right-arrow.png"
+  alt="back"
+/>
+<header>
+  <span>Your Details</span>
 </header>
 <div class="body">
-    <div class="title-area">
-        <div id="title">Upload your pictures here</div>
-        <div id="description">Please upload the pictures of your vehicle damaged.</div>
+  <div class="title-area">
+    <div id="title">Upload your pictures here</div>
+    <div id="description">
+      Please upload the pictures of your vehicle damaged.
     </div>
-    <div class="picture-area">
-        <input type="file" (change)="getFile1($event)"/>
-        <input type="file" (change)="getFile2($event)"/>
-    </div>
-    <form [formGroup]="form" class="description-area">
-        <textarea formControlName="text" placeholder="Accident description"></textarea>
-    </form>
-    <img id="finish" src="../../../assets/finish.png" alt="finish button" (click)="finish()"/>
+  </div>
+  <div class="picture-area">
+    <input type="file" (change)="getFile1($event)" />
+    <input type="file" (change)="getFile2($event)" />
+  </div>
+  <form [formGroup]="form" class="description-area">
+    <textarea
+      formControlName="text"
+      placeholder="Accident description"
+    ></textarea>
+  </form>
+  <img
+    id="finish"
+    src="../../../assets/finish.png"
+    alt="finish button"
+    (click)="finish()"
+  />
 </div>

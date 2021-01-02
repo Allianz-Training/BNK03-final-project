@@ -11,7 +11,5 @@ export class AuthenNavbarComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.routes);
-  }
+  ngOnInit(): void {}
 }

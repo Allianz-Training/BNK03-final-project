@@ -2,7 +2,10 @@
   <div class="absolute">
     <img src="../../../assets/car-insurance.png" alt="bnklaim-logo" />
     <span
-      ><a style="text-decoration: none; color: white" [routerLink]="['/home']"
+      ><a
+        (click)="check()"
+        style="text-decoration: none; color: white"
+        [routerLink]="['/home']"
         >BNKlaim</a
       ></span
     >
