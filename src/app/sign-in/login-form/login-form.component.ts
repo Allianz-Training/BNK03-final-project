@@ -7,7 +7,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  styleUrls: ['./login-form.component.css'],
 })
 export class LoginFormComponent implements OnInit {
   @Input() imgUrl: string = '';
@@ -15,21 +15,24 @@ export class LoginFormComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private builder: FormBuilder,private router: Router,
-    private dataService: DataService,) {
+  constructor(
+    private builder: FormBuilder,
+    private router: Router,
+    private dataService: DataService
+  ) {
     this.form = this.builder.group({
       email: ['', [Validators.required]],
       temporaryPassword: ['', [Validators.required]],
     });
-   }
-
-  ngOnInit(): void {
   }
+
+  ngOnInit(): void {}
   home() {
     let formData = this.form.value;
     this.dataService.post('/accounts/login', formData, {}).subscribe(
-      (body: Object) => {
+      (body: any) => {
         console.log(body);
+        this.dataService.insuranceAccountNumber = body.insuranceNumber;
         this.router.navigate(['home']);
       },
       (error: HttpErrorResponse) => {

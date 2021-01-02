@@ -9,8 +9,8 @@ export class DataService {
   hasThirdParty: boolean = false;
   insuranceAccountNumber: string = '';
 
-  private BACKEND_URI = 'http://ec2-54-179-82-140.ap-southeast-1.compute.amazonaws.com';
-
+  private BACKEND_URI =
+    'http://ec2-54-179-82-140.ap-southeast-1.compute.amazonaws.com';
 
   caseDetail = {
     thirdPartyDetail: {},
@@ -19,8 +19,8 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public get(route: string) {
-    return this.httpClient.get(this.BACKEND_URI + route);
+  public get(route: string, header: any) {
+    return this.httpClient.get(this.BACKEND_URI + route, header);
   }
 
   public post(route: string, body: any, header: any) {

@@ -1,21 +1,32 @@
-<div id="welcome"> {{contentHeader}}</div>
-        <img id="carpic" src="{{ imgUrl }}" alt="{{ imgUrl }}" />
-        <form [formGroup]="form">
-            <div class="input">
-                <em class="fa fa-user"></em>
-                <input type="text" id="username" placeholder="email" formControlName="email">
-                <span id="star" *ngIf="form.get('email')!.errors?.required">*</span>
-            </div>
-            <div class="input">
-                <i class="fa fa-lock"></i>
-                <input type="password" id="password" placeholder="Password" formControlName="temporaryPassword">
-                <span id="star" *ngIf="form.get('temporaryPassword')!.errors?.required">*</span>
-            </div>
-        </form>
-        <button (click)="home()" id="loginbtn" [disabled]="!form.valid" >Login</button>
-        <div class="under">
-            <input type="checkbox" />
-            <span id="remember-me">Remember me</span>
-            <span id="forgot-password">Forgot password</span>
-        </div>
-        
+<div id="welcome">{{ contentHeader }}</div>
+<img id="carpic" src="{{ imgUrl }}" alt="{{ imgUrl }}" />
+<form [formGroup]="form">
+  <div class="input">
+    <em class="fa fa-user"></em>
+    <input
+      type="text"
+      id="username"
+      placeholder="email"
+      formControlName="email"
+    />
+    <span id="star" *ngIf="form.get('email')!.errors?.required">*</span>
+  </div>
+  <div class="input">
+    <em class="fa fa-lock"></em>
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      formControlName="temporaryPassword"
+    />
+    <span id="star" *ngIf="form.get('temporaryPassword')!.errors?.required"
+      >*</span
+    >
+  </div>
+</form>
+<button (click)="home()" id="loginbtn" [disabled]="!form.valid">Login</button>
+<div class="under">
+  <input type="checkbox" />
+  <span id="remember-me">Remember me</span>
+  <span id="forgot-password">Forgot password</span>
+</div>

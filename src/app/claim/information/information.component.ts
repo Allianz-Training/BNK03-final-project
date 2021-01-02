@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
 // import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -28,7 +28,7 @@ export class InformationComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService
-      .get('/user/information/123456789012')
+      .get('/user/information/' + this.dataService.insuranceAccountNumber, {})
       .subscribe((data: any) => {
         console.log(data.message);
 
