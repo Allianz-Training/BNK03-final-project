@@ -67,9 +67,9 @@
       <span id="star" *ngIf="form.get('comfirmPassword')!.errors?.required"
         >*</span
       >
-      <div *ngIf="form.get('comfirmPassword')!.errors?.confirmedValidator">
+      <span id="not-match" *ngIf="form.get('comfirmPassword')!.errors?.confirmedValidator">
         Password and Confirm Password must be match.
-      </div>
+      </span>
     </div>
     <div>
       <button [routerLink]="['/login']" class="btn">&lt; back</button>
