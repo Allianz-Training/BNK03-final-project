@@ -10,7 +10,7 @@ export class DataService {
   insuranceAccountNumber: string = '';
 
   private BACKEND_URI =
-    'http://ec2-54-179-82-140.ap-southeast-1.compute.amazonaws.com';
+    'ec2-18-141-12-241.ap-southeast-1.compute.amazonaws.com';
 
   caseDetail = {
     thirdPartyDetail: {},
