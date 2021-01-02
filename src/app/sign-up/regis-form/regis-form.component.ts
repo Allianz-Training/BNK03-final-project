@@ -1,53 +1,70 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl,  } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
+import { ConfirmedValidator } from '../confirmed.validator';
 
 @Component({
   selector: 'app-regis-form',
   templateUrl: './regis-form.component.html',
-  styleUrls: ['./regis-form.component.css']
+  styleUrls: ['./regis-form.component.css'],
 })
 export class RegisFormComponent implements OnInit {
   public form: FormGroup;
 
-  constructor(private formControl: FormControl, private builder: FormBuilder,
+  constructor(
+    private builder: FormBuilder,
     private router: Router,
-    private dataService: DataService) { this.form = this.builder.group({
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
-      email: ['', [Validators.email, Validators.required]],
-      insuranceAccountNumber: ['', [Validators.required]],
-      temporaryPassword: ['', [Validators.required]],
-      comfirmPassword: ['', [Validators.required]],
-    });}
-
-  ngOnInit(): void {
-    this.form = new FormGroup({});
-    this.form.addControl('temporaryPassword', new FormControl('', [Validators.required]));
-    this.form.addControl('comfirmPassword', new FormControl(
-        '', [Validators.compose(
-            [Validators.required, this.validateAreEqual.bind(this)]
-        )]
-    ));
+    private dataService: DataService
+  ) {
+    this.form = this.builder.group(
+      {
+        firstName: ['', [Validators.required]],
+        lastName: ['', [Validators.required]],
+        email: ['', [Validators.email, Validators.required]],
+        insuranceAccountNumber: ['', [Validators.required]],
+        temporaryPassword: ['', [Validators.required]],
+        comfirmPassword: ['', [Validators.required]],
+      },
+      {
+        validator: ConfirmedValidator('temporaryPassword', 'comfirmPassword'),
+      }
+    );
   }
-  private validateAreEqual(fieldControl: FormControl) {
-    return fieldControl.value === this.form.get("temporaryPassword")!.value ? null : {
-        NotEqual: true
-    };
-}
-  register() {
-    // alert(true);
-    this.router.navigate(['/register/otp']);
-    console.log(this.form.value);
 
+  ngOnInit(): void {}
+
+  // private confirmedValidator(controlName: string, matchingControlName: string) {
+  //   const control = this.formGroup.controls[controlName];
+  //   const matchingControl = this.formGroup.controls[matchingControlName];
+
+  //   if (matchingControl.errors && !matchingControl.errors.confirmedValidator) {
+  //     return;
+  //   }
+
+  //   if (control.value !== matchingControl.value) {
+  //     matchingControl.setErrors({ confirmedValidator: true });
+  //   } else {
+  //     matchingControl.setErrors(null);
+  //   }
+  // }
+
+  register() {
     let formData = this.form.value;
-    this.dataService
-      .put('/accounts/register', formData, {})
-      .subscribe((data: any) => {
+    this.dataService.put('/accounts/register', formData, {}).subscribe(
+      (data: any) => {
         console.log(data);
         this.dataService.insuranceAccountNumber = this.form.value.insuranceAccountNumber;
         console.log(this.dataService);
-      });
+        this.router.navigate(['/register/otp']);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.error.message);
+        if (error.status == 409) {
+          this.router.navigate(['/login']);
+        }
+      }
+    );
   }
 }
