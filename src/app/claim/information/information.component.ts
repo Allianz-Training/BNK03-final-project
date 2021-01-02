@@ -28,7 +28,7 @@ export class InformationComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService
-      .get('/user/information/' + this.dataService.insuranceAccountNumber)
+      .get('/user/information/' + this.dataService.insuranceAccountNumber, {})
       .subscribe((data: any) => {
         console.log(data.message);
 
