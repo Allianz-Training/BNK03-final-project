@@ -1,0 +1,17 @@
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-homepage-navbar',
+  templateUrl: './homepage-navbar.component.html',
+  styleUrls: ['./homepage-navbar.component.css'],
+})
+export class HomepageNavbarComponent implements OnInit {
+  @Input()
+  routes: Array<any> = [];
+
+  constructor() {}
+
+  ngOnInit(): void {
+    console.log(this.routes);
+  }
+}

@@ -1,10 +1,15 @@
 <div class="navbar">
-  <div [routerLink]="['']">
+  <div class="absolute">
     <img src="../../../assets/car-insurance.png" alt="bnklaim-logo" />
     <span
       ><a style="text-decoration: none; color: white" [routerLink]="['/home']"
         >BNKlaim</a
       ></span
     >
+  </div>
+  <div class="link">
+    <a *ngFor="let route of routes" [routerLink]="[route.route]">{{
+      route.routeText
+    }}</a>
   </div>
 </div>

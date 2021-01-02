@@ -1,5 +1,10 @@
-<app-header></app-header>
+<app-homepage-navbar
+  [routes]="[
+    { route: '/contact', routeText: 'Contact' },
+    { route: '/', routeText: 'Logout' }
+  ]"
+></app-homepage-navbar>
 <div class="body">
-   <app-show-info></app-show-info>
-   <app-list-claim></app-list-claim>   
+  <app-show-info></app-show-info>
+  <app-list-claim></app-list-claim>
 </div>

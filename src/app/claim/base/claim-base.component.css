@@ -1,9 +1,9 @@
-.body{
-    display: flex;
-    flex-direction: column ;
-    align-items: center;
-    justify-content: center;
-    background: #e0e6f0;
-    height: 90%;
-    padding-bottom: 15px;
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e0e6f0;
+  height: calc(100% - 80px);
+  /* padding-bottom: 15px; */
 }

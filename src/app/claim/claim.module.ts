@@ -6,9 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThirdpartyComponent } from './thirdparty/thirdparty.component';
 import { OwnerComponent } from './owner/owner.component';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
 import { ShowInfoComponent } from './show-info/show-info.component';
 import { ListClaimComponent } from './list-claim/list-claim.component';
+import { GlobalModule } from '../global/global.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +16,16 @@ import { ListClaimComponent } from './list-claim/list-claim.component';
     InformationComponent,
     ThirdpartyComponent,
     OwnerComponent,
-    HeaderComponent,
     ShowInfoComponent,
     ListClaimComponent,
   ],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    GlobalModule,
+  ],
   exports: [
     ClaimBaseComponent,
     InformationComponent,
