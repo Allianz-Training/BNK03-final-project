@@ -1,0 +1,5 @@
+<div class="navbar">
+  <a *ngFor="let route of routes" [routerLink]="[route.route]">{{
+    route.routeText
+  }}</a>
+</div>
