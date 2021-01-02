@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl,  } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
@@ -9,9 +9,9 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./regis-form.component.css']
 })
 export class RegisFormComponent implements OnInit {
-  form: FormGroup;
+  public form: FormGroup;
 
-  constructor(private builder: FormBuilder,
+  constructor(private formControl: FormControl, private builder: FormBuilder,
     private router: Router,
     private dataService: DataService) { this.form = this.builder.group({
       firstName: ['', [Validators.required]],
@@ -23,8 +23,19 @@ export class RegisFormComponent implements OnInit {
     });}
 
   ngOnInit(): void {
-    
+    this.form = new FormGroup({});
+    this.form.addControl('temporaryPassword', new FormControl('', [Validators.required]));
+    this.form.addControl('comfirmPassword', new FormControl(
+        '', [Validators.compose(
+            [Validators.required, this.validateAreEqual.bind(this)]
+        )]
+    ));
   }
+  private validateAreEqual(fieldControl: FormControl) {
+    return fieldControl.value === this.form.get("temporaryPassword")!.value ? null : {
+        NotEqual: true
+    };
+}
   register() {
     // alert(true);
     this.router.navigate(['/register/otp']);
