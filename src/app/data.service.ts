@@ -19,8 +19,8 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) {}
 
-  public get(route: string, header: any) {
-    return this.httpClient.get(this.BACKEND_URI + route, header);
+  public get(route: string) {
+    return this.httpClient.get(this.BACKEND_URI + route);
   }
 
   public post(route: string, body: any, header: any) {

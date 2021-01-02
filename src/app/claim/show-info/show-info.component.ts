@@ -14,7 +14,7 @@ export class ShowInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService
-      .get('/user/information/' + this.dataService.insuranceAccountNumber, {})
+      .get('/user/information/' + this.dataService.insuranceAccountNumber)
       .subscribe((data: any) => {
         this.name = data.message.firstName + ' ' + data.message.lastName;
         this.insuranceNum = data.message.insuranceAccountNumber;
