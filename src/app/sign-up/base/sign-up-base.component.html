@@ -1,5 +1,11 @@
 <div class="body">
-  <app-navs></app-navs>
+  <app-authen-navbar
+    [routes]="[
+      { route: '/login', routeText: 'Login' },
+      { route: '/home', routeText: 'About us' },
+      { route: '/contact', routeText: 'Contact' }
+    ]"
+  ></app-authen-navbar>
   <h1>Registration</h1>
-  <app-regis-form></app-regis-form>  
+  <app-regis-form></app-regis-form>
 </div>

@@ -4,17 +4,18 @@ import { SignUpBaseComponent } from './base/sign-up-base.component';
 import { OtpComponent } from './otp/otp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { NavsComponent } from './navs/navs.component';
 import { RegisFormComponent } from './regis-form/regis-form.component';
+import { GlobalModule } from '../global/global.module';
 
 @NgModule({
-  declarations: [
-    SignUpBaseComponent,
-    OtpComponent,
-    NavsComponent,
-    RegisFormComponent,
+  declarations: [SignUpBaseComponent, OtpComponent, RegisFormComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    GlobalModule,
   ],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
   exports: [SignUpBaseComponent, OtpComponent],
 })
 export class SignUpModule {}
