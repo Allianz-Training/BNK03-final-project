@@ -1,56 +1,56 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClaimBaseComponent } from './claim/base/base.component';
-import { LandingPageBaseComponent } from './landing-page/base/base.component';
-import { SignInBaseComponent } from './sign-in/base/base.component';
-import { SignUpBaseComponent } from './sign-up/base/base.component';
+import { ClaimBaseComponent } from './claim/base/claim-base.component';
+import { LandingPageBaseComponent } from './landing-page/base/landing-page-base.component';
+import { SignInBaseComponent } from './sign-in/base/sign-in-base.component';
+import { SignUpBaseComponent } from './sign-up/base/sign-up-base.component';
 import { OtpComponent } from './sign-up/otp/otp.component';
 import { ContactComponent } from './contact/base/base.component';
-import { OwnerComponent } from './claim/owner/owner.component'
+import { OwnerComponent } from './claim/owner/owner.component';
 import { ThirdpartyComponent } from './claim/thirdparty/thirdparty.component';
-import { InformationComponent} from './claim/information/information.component';
+import { InformationComponent } from './claim/information/information.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component: LandingPageBaseComponent
+    path: '',
+    component: LandingPageBaseComponent,
   },
   {
-    path:'login',
-    component: SignInBaseComponent
+    path: 'login',
+    component: SignInBaseComponent,
   },
   {
-    path:'register',
-    component: SignUpBaseComponent
+    path: 'register',
+    component: SignUpBaseComponent,
   },
   {
-    path:'register/otp',
-    component: OtpComponent
+    path: 'register/otp',
+    component: OtpComponent,
   },
   {
-    path:'home',
-    component: ClaimBaseComponent
+    path: 'home',
+    component: ClaimBaseComponent,
   },
   {
-    path:'contact',
-    component: ContactComponent
+    path: 'contact',
+    component: ContactComponent,
   },
   {
-    path:'owner',
-    component: OwnerComponent
+    path: 'owner',
+    component: OwnerComponent,
   },
   {
-    path:'thirdparty',
-    component: ThirdpartyComponent
+    path: 'thirdparty',
+    component: ThirdpartyComponent,
   },
   {
-    path:'info',
-    component: InformationComponent
-  }
+    path: 'info',
+    component: InformationComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

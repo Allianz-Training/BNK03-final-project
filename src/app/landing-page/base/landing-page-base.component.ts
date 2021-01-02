@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'landing-page-base',
-  templateUrl: './base.component.html',
-  styleUrls: ['./base.component.css'],
+  templateUrl: './landing-page-base.component.html',
+  styleUrls: ['./landing-page-base.component.css'],
 })
 export class LandingPageBaseComponent implements OnInit {
   topics: Array<any> = [

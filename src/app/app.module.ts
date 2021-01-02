@@ -16,20 +16,25 @@ import { TableComponent } from './contact/table/table.component';
 
 // import { NgOtpInputModule } from  'ng-otp-input';
 
-
 @NgModule({
-  declarations: [AppComponent, ContactComponent, HeaderComponent, ContactComponent , TableComponent],
+  declarations: [
+    AppComponent,
+    ContactComponent,
+    HeaderComponent,
+    ContactComponent,
+    TableComponent,
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    RouterModule,
     LandingPageModule,
     FormsModule,
     SignInModule,
     SignUpModule,
     ClaimModule,
-    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

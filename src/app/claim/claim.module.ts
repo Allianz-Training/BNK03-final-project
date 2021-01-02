@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ClaimBaseComponent } from './base/base.component';
+import { ClaimBaseComponent } from './base/claim-base.component';
 import { InformationComponent } from './information/information.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ThirdpartyComponent } from './thirdparty/thirdparty.component';
@@ -11,12 +11,21 @@ import { ShowInfoComponent } from './show-info/show-info.component';
 import { ListClaimComponent } from './list-claim/list-claim.component';
 
 @NgModule({
-  declarations: [ClaimBaseComponent, InformationComponent, ThirdpartyComponent, OwnerComponent, HeaderComponent, ShowInfoComponent, ListClaimComponent],
-  imports: [
-    CommonModule,FormsModule, ReactiveFormsModule,RouterModule
+  declarations: [
+    ClaimBaseComponent,
+    InformationComponent,
+    ThirdpartyComponent,
+    OwnerComponent,
+    HeaderComponent,
+    ShowInfoComponent,
+    ListClaimComponent,
   ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
   exports: [
-    ClaimBaseComponent,InformationComponent,OwnerComponent, ThirdpartyComponent
-  ]
+    ClaimBaseComponent,
+    InformationComponent,
+    OwnerComponent,
+    ThirdpartyComponent,
+  ],
 })
-export class ClaimModule { }
+export class ClaimModule {}
