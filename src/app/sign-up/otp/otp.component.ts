@@ -52,7 +52,6 @@ export class OtpComponent implements OnInit {
       this.dataService
         .put('/accounts/register/otp', body, {})
         .subscribe((data: any) => {
-          console.log(data);
           this.router.navigate(['home']);
         });
     }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from 'src/app/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage-navbar',
@@ -10,11 +10,11 @@ export class HomepageNavbarComponent implements OnInit {
   @Input()
   routes: Array<any> = [];
 
-  constructor(private dataService: DataService) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  check() {
-    console.log(this.dataService);
+  backToHome() {
+    this.router.navigate(['home']);
   }
 }

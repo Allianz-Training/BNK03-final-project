@@ -48,21 +48,29 @@ export class OwnerComponent implements OnInit {
     formData.ownerImage2 = this.file2Base64;
     formData.insuranceAccountNumber = this.dataService.insuranceAccountNumber;
 
-    this.dataService.caseDetail.customerCaseDetail = formData;
-    console.log(this.dataService.caseDetail);
-
-    this.dataService
-      .post('/claim/case', this.dataService.caseDetail, {})
-      .subscribe(
-        () => {
-          alert('Success');
-          this.router.navigate(['home']);
-        },
-        () => {
-          alert('An error occur, please try again or contact admin.');
-          this.router.navigate(['contact']);
-        }
+    if (
+      formData.ownerImage1 == undefined &&
+      formData.ownerImage2 == undefined &&
+      formData.text == ''
+    ) {
+      alert(
+        'Warning: Please assign description and accident image in this form.'
       );
+    } else {
+      this.dataService.caseDetail.customerCaseDetail = formData;
+      this.dataService
+        .post('/claim/case', this.dataService.caseDetail, {})
+        .subscribe(
+          () => {
+            alert('Success');
+            this.router.navigate(['home']);
+          },
+          () => {
+            alert('An error occur, please try again or contact admin.');
+            this.router.navigate(['contact']);
+          }
+        );
+    }
   }
 
   async getFile1(fileInput: any) {

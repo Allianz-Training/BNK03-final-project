@@ -1,11 +1,8 @@
 <div class="navbar">
-  <div class="absolute">
+  <div class="absolute" (click)="backToHome()">
     <img src="../../../assets/car-insurance.png" alt="bnklaim-logo" />
     <span
-      ><a
-        (click)="check()"
-        style="text-decoration: none; color: white"
-        [routerLink]="['/home']"
+      ><a style="text-decoration: none; color: white" [routerLink]="['/home']"
         >BNKlaim</a
       ></span
     >
