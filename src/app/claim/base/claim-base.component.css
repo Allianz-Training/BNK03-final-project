@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   background: #e0e6f0;
-  height: calc(100% - 80px);
+  height: calc(100% - 30px);
   /* padding-bottom: 15px; */
 }
 .list {
