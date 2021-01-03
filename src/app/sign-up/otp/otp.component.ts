@@ -40,7 +40,7 @@ export class OtpComponent implements OnInit {
       console.log('do something');
       let otp: string =
         this.otpValue1 + this.otpValue2 + this.otpValue3 + this.otpValue4;
-      alert(otp);
+      // alert(otp);
       console.log(this.dataService);
 
       let body = {
@@ -52,7 +52,7 @@ export class OtpComponent implements OnInit {
       this.dataService
         .put('/accounts/register/otp', body, {})
         .subscribe((data: any) => {
-          this.router.navigate(['home']);
+          this.router.navigate(['login']);
         });
     }
   }
